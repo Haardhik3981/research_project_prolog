@@ -14,5 +14,5 @@ response = client.chat.completions.create(
 )
 
 prolog_code = response.choices[0].message.content
-print("\n🔧 Prolog rules returned by GPT:\n")
+print("\nProlog rules returned by GPT:\n")
 print(prolog_code)
