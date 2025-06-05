@@ -6,8 +6,8 @@ prolog.consult("simpsons_kb.pl")
 
 def run_query(nl_question):
     logic_query = nl_to_logic_langchain(nl_question)
-    print(f"\n🔹 NL Query: {nl_question}")
-    print(f"🔸 Prolog Query: {logic_query}")
+    print(f"\nNL Query: {nl_question}")
+    print(f"Prolog Query: {logic_query}")
     
     results = list(prolog.query(logic_query.rstrip(".") + "."))
     if not results:
