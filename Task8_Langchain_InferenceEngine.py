@@ -30,11 +30,11 @@ queries = [
 ]
 
 for question in queries:
-    print(f"\n🔹 NL Query: {question}")
+    print(f"\nNL Query: {question}")
     logic_query = nl_to_logic_langchain(question)
-    print(f"🔸 Logic Query: {logic_query}")
+    print(f"Logic Query: {logic_query}")
     try:
         goal = logic_tuple_from_string(logic_query)
         print_results(question, goal)
     except Exception as e:
-        print("❌ Failed to parse logic query:", e)
+        print("Failed to parse logic query:", e)

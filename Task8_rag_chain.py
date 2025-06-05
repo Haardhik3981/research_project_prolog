@@ -38,8 +38,8 @@ rag_chain = RetrievalQA.from_chain_type(
 query = "Which females are Lisa’s parents?"
 result = rag_chain.invoke(query)
 
-print("🔹 Query:", query)
-print("✅ Answer:", result["result"])
-print("📚 Retrieved Context:")
+print("Query:", query)
+print("Answer:", result["result"])
+print("Retrieved Context:")
 for doc in result["source_documents"]:
     print(doc.page_content.strip())

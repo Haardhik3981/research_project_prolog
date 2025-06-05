@@ -11,10 +11,10 @@ def run_query(nl_question):
     
     results = list(prolog.query(logic_query.rstrip(".") + "."))
     if not results:
-        print("❌ No results.")
+        print("No results.")
     else:
         for res in results:
-            print("✅", res)
+            print("Yes: ", res)
 
 # Example queries
 run_query("Who are Bart's grandparents?")

@@ -77,9 +77,9 @@ def print_results(query_text, goal):
         found = True
         answer = {k: v for k, v in result.items() if k.startswith("?")}
         if answer:
-            print("✅ Answer:", ", ".join(f"{k} = {v}" for k, v in answer.items()))
+            print("Answer:", ", ".join(f"{k} = {v}" for k, v in answer.items()))
     if not found:
-        print("❌ No answer found.")
+        print("No answer found.")
 
 # === Run Sample Queries ===
 
